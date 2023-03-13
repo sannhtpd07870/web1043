@@ -5,8 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bai 1</title>
-    <script src="lap2.js"></script>
 </head>
 <body>
+    <script>
+        //khai bao bien a
+        let a = prompt("nhap vao he so bac hai cua phuong trinh: ");
+        //ep kieu a vua nhap thanh float
+         a = parseFloat(a);
+        //khai bao bien b
+        let b = prompt("nhap vao he so bac hai cua phuong trinh: ");
+        //ep kieu 
+         b = parseFloat(b);
+       //khai bien c
+       let c = prompt("nhap vao he so tu do cua phuong trinh: ");
+         c = parseFloat(c);
+       //kiem tra bien a xet phuong trinh bac nhat hay bac 2
+       if(a==0)
+       {
+        //kiem tra bien b
+        // xet phuong trinh bac nhat
+        if(b==0)
+        {
+            // kiem tra bien c
+           if(c==0)
+           {
+            console.log("phuong trinh co vo so nghiem");
+           }
+           else
+           {
+            console.log("phuong trinh vo nghiem");
+           }
+           // tinh nghiem phuong trinh bac nhat
+        }
+        else
+        {
+            console.log("phuong trinh co nghiem duy nhat x = "+(-c/b));
+        }
+       }
+       //xet truong hop he so bac 2 khac 0
+       else
+       {
+            // tinh delta
+            let delTa = b*b-4*a*c;
+            //delTa<0-->phuong trinh vo nghiem
+            if(delTa<0)
+            {
+                console.log("phuong trinh vo nghiem");
+            }
+            //delTa = 0-->phuong trinh co nghiem kep
+            else if(delTa==0)
+            {
+                console.log("phuong trinh co nghiem kep x1=x2= "+(-b/2*a));
+            }
+            //delTa>0--->phuong trinh co 2 nghiem phan biet
+            else
+            {
+                console.log("phuong trinh co 2 nghiem phan biet: ");
+                console.log("x1 = "+((Math.sqrt(delTa))/(2*a)));
+                console.log("x2 = "+((-b-Math.sqrt(delTa))/2*a));
+            }
+       }
+
+
+    </script>
 </body>
 </html>

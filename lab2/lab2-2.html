@@ -12,12 +12,12 @@
        var hoTen = prompt("nhap vao ho va ten : ");
        //nhap gioi tinh tu ban phim
        var gioiTinh = prompt("nhap vao gioi tinh: ");
-       //khai bao bien theo yeu cau cua bai toan
+       //khai bao bien
        var hoTenHopLe = hoTen.trim();
        var ho = ho;
        var tenDem = tenDem;
        var ten = ten;
-       //kiem tra ho voi ten dem va ten bang dau cach
+       //kiem tra ho voi ten dem
        for(var i=0;i<hoTenHopLe.length;i++)
        {
         if(hoTenHopLe[i]==" ")
@@ -29,7 +29,6 @@
         }
        }
     //kiem tra co ton tai ten dem
-    //gia su ten nhap ban dau khong co ten dem
         var check = false;
         for(var i=hoTenHopLe.length-1;i>=0;i--)
        {
@@ -44,7 +43,7 @@
             break;
         }
        }
-       //xet truong hop khong ten dem
+       //truong hop khong ten dem
        if(check==false)
        {
         ten = hoTenHopLe;
@@ -59,12 +58,12 @@
         console.log("Ten dem: "+tenDem);
         console.log("Ten: "+ten);
         //kiem tra gioi tinh nhap tu ban phim va thay doi theo yeu cau cua de bai
-        //neu la nam va co ten dem thi doi ten dem thanh Van
+        //la nam va co ten dem thi doi ten dem thanh Van
         if(gioiTinh.toLowerCase()=="nam")
         {
             tenDem = "Van";
         }
-        //neu la nu va co ten dem thi doi ten dem thanh Ve
+        // la nu va co ten dem thi doi ten dem thanh Ve
         else if(gioiTinh.toLowerCase()=="nu")
         {
             tenDem = "Ve";    
