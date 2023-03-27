@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container .header{
+    background-image: url(web2.png);
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.menu{
+    min-height: 40px;
+    background-color: green;
+}
+.menu ul{
+    list-style: none;
+    background-color: orange;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.menu ul li{
+    display: inline-block;
+    position: relative;
+}
+
+.menu ul li a{
+    display: block;
+    font-variant: small-caps;
+    text-decoration: none;
+    font-size: large;
+    color: aliceblue;
+    padding: 0 10px;
+    line-height: 40px;
+}
+
+.menu ul li a:hover{
+    background-color: rgb(69, 219, 82);
+    color: white;
+    text-shadow: 0 0 3px red;
+}
+
+.menu ul ul{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    box-shadow: 0 0 2px gray;
+    background-color: aliceblue;
+    border-radius: 3px;
+    text-align: left;
+}
+
+.menu ul ul li{
+    display: block;
+
+}
+
+.menu ul ul a{
+    display: block;
+    color: rgb(202, 39, 145);
+    text-decoration: none;
+    font-size: large;
+    font-variant: small-caps;
+    padding: 0 10px;
+    line-height: 30px;
+    z-index: 1000px;
+
+}
+
+.menu ul ul a:hover{
+    color: rgb(20, 17, 17);
+    background-color: rgb(38, 211, 87);
+}
+
+.menu ul li:hover ul{
+    display: block;
+    
+}
+
+
+.marquee{
+    line-height: 25px;
+    min-height: 25px;
+    z-index: -1;
+}
+
+.content{
+    width: 100%;
+    height: auto;
+    min-height: 1400px;
+    margin-bottom: 10px;
+}
+
+.content article{
+    width: 75%;
+    float: left;
+    background-color: lightskyblue;
+    min-height: 1400px;
+}
+.content article iframe[name=page]{
+    width: 100%;
+    height: 1400px;
+}
+
+.content aside{
+    width: 25%;
+    float: right;
+    background-color: rgb(42, 199, 216);
+    min-height: 1400px;
+}
+
+.lichlv .whidthR{
+    width: 100%;
+}
+
+
+.lichlv ul{
+    list-style: none;
+}
+.lichlv ul a{
+    display: block;
+    background-image: url(/image/check.png);
+    background-size: 15px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    padding: 5px 40px;
+    text-decoration: none;
+}
+
+.lichlv ul a:hover{
+    color: rgb(219, 36, 182);
+    text-shadow: 0 0 2px red;
+    background-image: url(/image/next.png);
+    background-size: 15px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+}
+.widthR img:hover{
+    box-shadow:  0 5px 5px red;
+}
+
+
+
+
+
+
+footer{
+    clear: both;
+    min-height: 50px;
+    background-color: rgb(220, 109, 193);
+    line-height: 50px;
+    border-top: 1px dotted red;
+}

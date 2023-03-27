@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form{
+            width: 400px;
+            margin: 0 auto;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 5px red;
+        }
+        .form-control{
+            width: 94%;
+        }
+        .form-control:focus{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1 text align="center">Form liên hệ</h1>
+    <form class="form" action="" method="post">
+        Họ và tên: <br>
+        <input class="form-control" type="text" name="" id=""> <br>
+        Giới tính:
+        <label for="">
+            <input type="radio" name="gender" id=""> Nam
+            <input type="radio" name="gender" id=""> Nữ
+        </label> <br>
+        Quốc tịch: <br>
+       <section  name="list" id="list"><option value="VietNam">VietNam</option></section>
+
+        Sở thích: <br>
+        <label for="">
+            <input type="checkbox" name="" id="">Thể Thao
+        </label>
+        <label for="">
+            <input type="checkbox" name="" id="">Du lịch
+        </label>
+        <label for="">
+            <input type="checkbox" name="" id="">Nấu ăn
+        </label><br>
+
+        Ghi chú: <br>
+        <textarea class="form-control" name="" id="" cols="50" rows="10"></textarea><br>
+        <hr>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+</body>
+</html>
