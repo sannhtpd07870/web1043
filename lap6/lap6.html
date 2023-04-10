@@ -141,11 +141,15 @@
    <span class="dot" onclick="currentSlide(6)"></span>
  </div>
  <script>
+  // biến tạo xác định vị trí ảnh slide
   var slideIndex = 1;
 showSlides(slideIndex);
+/* hàm điều khiển slide bằng mũi tên */
 function plusSlides(n) {
+  // di chuyển đến ảnh n+1
   showSlides(slideIndex += n);
-}
+} 
+/* hàm điều khiển slide bằng nút tròn*/
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+  }
+
+  .left {
+    width: 50%;
+    height: 100%;
+    border: 2px dashed black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right {
+    width: 50%;
+    height: 100%;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    padding: 10px;
+    margin: 5px;
+    background-color: #eee;
+    cursor: move;
+  }
+</style>
+<body>
+<div class="container">
+  <div class="left" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <h2>Drop here</h2>
+  </div>
+  <div class="right" ondrop="dropBack(event)" ondragover="allowDrop(event)">
+    <ul>
+      <li draggable="true" ondragstart="drag(event)" ondragend="remove(event)">Item 1</li>
+      <li draggable="true" ondragstart="drag(event)" ondragend="remove(event)">Item 2</li>
+      <li draggable="true" ondragstart="drag(event)" ondragend="remove(event)">Item 3</li>
+      <li draggable="true" ondragstart="drag(event)" ondragend="remove(event)">Item 4</li>
+      <li draggable="true" ondragstart="drag(event)" ondragend="remove(event)">Item 5</li>
+    </ul>
+  </div>
+</div>
+<script>
+function allowDrop(event) {
+  event.preventDefault();
+}
+
+function drag(event) {
+  event.dataTransfer.setData("text", event.target.innerText);
+}
+function drop(event) {
+  event.preventDefault();
+  var data = event.dataTransfer.getData("text");
+  event.target.innerHTML += "<li draggable='true' ondragstart='drag(event)' ondragend='remove(event)'>" + data + "</li>";
+}
+
+function dropBack(event) {
+   event.preventDefault();
+   var data = event.dataTransfer.getData("text");
+   var ul = document.querySelector(".right ul");
+   ul.innerHTML += "<li draggable='true' ondragstart='drag(event)' ondragend='remove(event)'>" + data + "</li>";
+}
+
+function remove(event) {
+   event.target.remove();
+}
+</script>
+</body>
+</html>

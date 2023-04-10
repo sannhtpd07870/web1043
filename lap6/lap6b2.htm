@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <style>
+  /*căn giữa*/
     .img1{
         margin-top: 200px;
         margin-left: auto;
@@ -17,13 +18,18 @@
 </style>
 <body>
     <img class="img1" id="myImage" src="ảnh/ảnhtest.jpg" onmouseover="zoomIn()" onmouseout="zoomOut()" >
+
 <script>
+  // khi rê chuột vào
 function zoomIn() {
   var img = document.getElementById("myImage");
+  // size ảnh*2
   img.style.transform = "scale(2)";
 }
+// khi rê chuột ra
 function zoomOut() {
   var img = document.getElementById("myImage");
+  // ảnh gốc
   img.style.transform = "scale(1)";
 }
 </script>

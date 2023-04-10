@@ -5,11 +5,10 @@
 
 .container{
     width: 100%;
-    margin: 0 auto;
+
 }
 
-.container .header{
-    background-image: url(web2.png);
+.header{
     width: 100%;
     height: 200px;
     background-repeat: no-repeat;

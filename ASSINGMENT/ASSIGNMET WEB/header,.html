@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <link rel="stylesheet" href="header.css">
+            <!-- Thẻ Chứa Slideshow -->
+     <div class="slideshow-container">
+        <!-- Kết hợp hình ảnh và nội dung cho mội phần tử trong slideshow-->
+         <div class="mySlides fade">
+           <div class="numbertext">1 / 6</div>
+           <img src="ảnh/anh1.1.jpg"  >
+           
+         </div>
+        <div class="mySlides fade">
+           <div class="numbertext">2 / 6</div>
+           <img src="ảnh/anh2.1.jpg" >
+           
+         </div>
+        <div class="mySlides fade">
+           <div class="numbertext">3 / 6</div>
+           <img src="ảnh/anh3.1.jpg">
+           
+         </div>
+         <div class="mySlides fade">
+          <div class="numbertext">4 / 6</div>
+          <img src="ảnh/anh4.1.jpg">
+          <div class="text">anh top</div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 6</div>
+          <img src="ảnh/anh5.1.jpg" >
+          
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="ảnh/anh6.1.jpg" >
+          
+        </div>
+        <!-- Nút điều khiển mũi tên-->
+         <a class="prev" onclick="plusSlides(-1)">❮</a>
+         <a class="next" onclick="plusSlides(1)">❯</a>
+       </div>
+       <br>
+      <!-- Nút tròn điều khiển slideshow-->
+       <div style="text-align:center">
+         <span class="dot" onclick="currentSlide(1)"></span>
+         <span class="dot" onclick="currentSlide(2)"></span>
+         <span class="dot" onclick="currentSlide(3)"></span>
+         <span class="dot" onclick="currentSlide(4)"></span>
+         <span class="dot" onclick="currentSlide(5)"></span>
+         <span class="dot" onclick="currentSlide(6)"></span>
+       </div>
+       <script src="header.js"></script>
+        </div>
+</body>
+</html>
